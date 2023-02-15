@@ -35,7 +35,7 @@ The REACTors:
 * [Vittoria Bugana](https://github.com/vbugana)
 * [Guillerme Duretti](https://github.com/GuilhermeDeretti)
 * [Santiago Gomez](https://github.com/2G2-99)
-* Dayo 
+* [Dayo Adekunle](https://github.com/Data202)
 
 ## Licence
 MIT
