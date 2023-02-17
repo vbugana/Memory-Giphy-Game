@@ -1,16 +1,20 @@
-import BasicUsage from './components/Modal';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Nav from './components/Nav';
+import MemoryGame from './components/pages/MemoryGame';
+import Scores from './components/pages/Scores';
 
-import { Heading, Text, Box } from '@chakra-ui/react';
+function App() {
 
-const App = () => {
-	return (
-		<>
-			<h1>Hello World in Vite!</h1>
-			<div className="App">
-				<BasicUsage />
-			</div>
-		</>
-	);
-};
-
+  return (
+    <Router>
+      <div className="container">        
+        <Routes>
+          <Route path="memory-giphy-game/" element={<MemoryGame />} />
+          <Route path="memory-giphy-game/scores" element={<Scores />} />
+        </Routes>
+        <Nav />
+      </div>
+    </Router>
+  );
+}
 export default App;
