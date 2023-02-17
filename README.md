@@ -30,8 +30,11 @@ I want to get the highest score in the allocated available attempts
 
 Matching two GIFs on the allowed attempts
 
-## Wireframe
-TO BE ADDED ("./images/wireframe")
+## Wireframe:
+
+![copy of LISA (5)](https://user-images.githubusercontent.com/94523827/219762518-31033354-755d-412c-bb1f-faf9620ea56c.png)
+
+![copy of LISA (6)](https://user-images.githubusercontent.com/94523827/219763372-ddf290e3-fe75-4346-b510-5a4ee47daeac.png)
 
 ## Technologies used
 * Javascript
