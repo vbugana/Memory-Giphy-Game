@@ -4,17 +4,16 @@ import MemoryGame from './components/pages/MemoryGame';
 import Scores from './components/pages/Scores';
 
 function App() {
-
-  return (
-    <Router>
-      <div className="container">        
-        <Routes>
-          <Route path="memory-giphy-game/" element={<MemoryGame />} />
-          <Route path="memory-giphy-game/scores" element={<Scores />} />
-        </Routes>
-        <Nav />
-      </div>
-    </Router>
-  );
+	return (
+		<Router>
+			<div className="container">
+				<Routes>
+					<Route path="/" element={<MemoryGame />} />
+					<Route path="memory-giphy-game/scores" element={<Scores />} />
+				</Routes>
+				<Nav />
+			</div>
+		</Router>
+	);
 }
 export default App;
