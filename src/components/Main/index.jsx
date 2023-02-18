@@ -1,14 +1,13 @@
-import gameCards from '../../Data/gameCards.json';
-import GameCard from '../GameCard';
+import { Box } from '@chakra-ui/react';
+
+import Playground from '../Playground';
 
 const Main = () => {
 	return (
 		<>
-			<div>
-				{gameCards.map(card => (
-					<GameCard key={card.key} image={card.image} />
-				))}
-			</div>
+			<Box m={'auto'} w={{ base: '96%', md: '60%', lg: '40%', xl: '20%' }}>
+				<Playground />
+			</Box>
 		</>
 	);
 };
