@@ -24,7 +24,7 @@ const Header = () => {
 			<Box as="header">
 				<Flex>
 					<VStack margin={'auto'}>
-						<Heading as={'h1'}>Reactors Game</Heading>
+						<Heading as={'h1'}>REACTors Game</Heading>
 						<HStack>
 							<Box
 								display="flex"
