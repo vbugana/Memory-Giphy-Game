@@ -18,16 +18,12 @@ import { useRef, useState } from 'react';
 
 function InitialFocus() {
 	const { isOpen, onOpen, onClose } = useDisclosure();
+	//({ defaultIsOpen: true });
 
 	const initialRef = useRef('');
 	let inputRef = useRef(null);
 
 	const [input, setInput] = useState('');
-	// const [value, setValue] = useState(input);
-
-	// const handleChange = e => {
-	// 	setInput(e.target.value);
-	// };
 
 	const handleClick = () => {
 		setInput(inputRef.current.value);
@@ -36,10 +32,6 @@ function InitialFocus() {
 
 	return (
 		<>
-			<Button onClick={onOpen} m="2em">
-				Open Modal
-			</Button>
-
 			<Modal
 				size={'sm'}
 				initialFocusRef={initialRef}
@@ -60,8 +52,6 @@ function InitialFocus() {
 								ref={inputRef}
 								placeholder="AAA"
 								maxLength={'3'}
-								// onChange={handleChange}
-								// value={input}
 							/>
 						</FormControl>
 					</ModalBody>
