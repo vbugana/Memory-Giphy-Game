@@ -21,7 +21,7 @@ const Header = () => {
 
 	return (
 		<>
-			<Box as="header">
+			<Box as="header" marginBottom={'6'}>
 				<Flex>
 					<VStack margin={'auto'}>
 						<Heading as={'h1'}>Reactors Game</Heading>
