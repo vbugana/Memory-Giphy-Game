@@ -3,15 +3,24 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from '../src/components/Navbar';
 import MemoryGame from './pages/MemoryGame';
 import Scores from './pages/Scores';
+import { GameProvider } from './components/GameContext'
 
 function App() {
 	return (
 		<Router>
+//added/game-rules
+			<div className="container">
+			<GameProvider>
+
 			<Box id={'root-body'}>
+ main
 				<Routes>
-					<Route path="/" element={<MemoryGame />} />
-					<Route path="/scores" element={<Scores />} />
+					
+						<Route path="/" element={<MemoryGame />} />
+						<Route path="/scores" element={<Scores />} />
+					
 				</Routes>
+				</GameProvider>
 				<Navbar />
 			</Box>
 		</Router>
