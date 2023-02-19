@@ -7,9 +7,9 @@ function Navbar() {
 	return (
 		<Flex align={'center'} justify={'center'} padding={'4'} marginTop={'6'}>
 			<HStack>
-				<Button borderRadius={'full'} padding={'4'}>
+				<Button borderRadius={'full'} padding={'4'} boxShadow={'base'}>
 					<Link
-						textDecorationLine={'none'}
+						_hover={{ textDecoration: 'none' }}
 						as={RouterLink}
 						to="/"
 						end
@@ -20,9 +20,9 @@ function Navbar() {
 						Game
 					</Link>
 				</Button>
-				<Button borderRadius={'full'} padding={'4'}>
+				<Button borderRadius={'full'} padding={'4'} boxShadow={'base'}>
 					<Link
-						textDecorationLine={'none'}
+						_hover={{ textDecoration: 'none' }}
 						as={RouterLink}
 						to="scores"
 						className={({ isActive }) =>
