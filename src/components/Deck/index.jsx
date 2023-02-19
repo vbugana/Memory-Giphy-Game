@@ -19,13 +19,13 @@ function Deck(props) {
 
 	const onCardClick = () => {
 		if (flippedState == false) {
-			setFlippedState(!flippedState)
+			setFlippedState(!flippedState);
 		}
-	}
+	};
 
 	return (
-		<Card bg="white" h={'100%'}>
-			<CardBody padding="2">
+		<Card bg={'steel-blue'} h={'100%'}>
+			<CardBody padding={2}>
 				<Image
 					borderRadius={'base'}
 					mx="auto"
