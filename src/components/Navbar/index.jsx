@@ -1,32 +1,40 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Flex, Link, HStack, Button, ButtonGroup } from '@chakra-ui/react';
 
-function Nav() {
+import React from 'react';
+import { NavLink as RouterLink } from 'react-router-dom';
+
+function Navbar() {
 	return (
-		<ul className="nav nav-tabs bg-dark">
-			<li className="nav-item">
-				<NavLink
-					to="/"
-					end
-					className={({ isActive }) =>
-						isActive ? 'nav-link active' : 'nav-link'
-					}
-				>
-					Game
-				</NavLink>
-			</li>
-			<li className="nav-item">
-				<NavLink
-					to="scores"
-					className={({ isActive }) =>
-						isActive ? 'nav-link active' : 'nav-link'
-					}
-				>
-					HighScores
-				</NavLink>
-			</li>
-		</ul>
+		<Flex align={'center'} justify={'center'} padding={'4'} marginTop={'6'}>
+			<HStack>
+				<Button borderRadius={'full'} padding={'4'}>
+					<Link
+						textDecorationLine={'none'}
+						as={RouterLink}
+						to="/"
+						end
+						className={({ isActive }) =>
+							isActive ? 'nav-link active' : 'nav-link'
+						}
+					>
+						Game
+					</Link>
+				</Button>
+				<Button borderRadius={'full'} padding={'4'}>
+					<Link
+						textDecorationLine={'none'}
+						as={RouterLink}
+						to="scores"
+						className={({ isActive }) =>
+							isActive ? 'nav-link active' : 'nav-link'
+						}
+					>
+						Scores
+					</Link>
+				</Button>
+			</HStack>
+		</Flex>
 	);
 }
 
-export default Nav;
+export default Navbar;
