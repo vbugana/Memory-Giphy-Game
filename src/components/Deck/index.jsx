@@ -17,6 +17,12 @@ function Deck(props) {
 		}
 	}, [flippedState]);
 
+	const onCardClick = () => {
+		if (flippedState == false) {
+			setFlippedState(!flippedState)
+		}
+	}
+
 	return (
 		<Card bg="white" h={'100%'}>
 			<CardBody padding="2">
@@ -26,7 +32,7 @@ function Deck(props) {
 					h={'100%'}
 					objectFit={'cover'}
 					src={imageState}
-					onClick={() => setFlippedState(!flippedState)}
+					onClick={onCardClick}
 				/>
 			</CardBody>
 		</Card>
