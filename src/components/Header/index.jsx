@@ -20,44 +20,48 @@ const Header = () => {
 	};
 
 	return (
-		<>
-			<Box as="header" marginBottom={'6'}>
-				<Flex>
-					<VStack margin={'auto'}>
-						<Heading as={'h1'}>REACTors Game</Heading>
-						<HStack>
-							<Box
-								display="flex"
-								alignItems="center"
-								justifyContent="space-between"
-							>
-								<Text>
-									Turns: <Text as={'span'}>0</Text>
-								</Text>
-							</Box>
-							<Box
-								display="flex"
-								alignItems="center"
-								justifyContent="space-between"
-							>
-								<Text>
-									Attempts: <Text as={'span'}>0</Text>
-								</Text>
-							</Box>
-							<Box
-								display="flex"
-								alignItems="center"
-								justifyContent="space-between"
-							>
-								<Text>
-									Wins: <Text as={'span'}>0</Text>
-								</Text>
-							</Box>
-						</HStack>
-					</VStack>
-				</Flex>
-			</Box>
-		</>
+		<Box
+			as="header"
+			paddingTop={2}
+			paddingBottom={2}
+			bg={'sky-blue'}
+			textColor={'raisin-black'}
+		>
+			<Flex>
+				<VStack margin={'auto'}>
+					<Heading as={'h1'}>REACTors Game</Heading>
+					<HStack>
+						<Box
+							display="flex"
+							alignItems="center"
+							justifyContent="space-between"
+						>
+							<Text>
+								Turns: <Text as={'span'}>0</Text>
+							</Text>
+						</Box>
+						<Box
+							display="flex"
+							alignItems="center"
+							justifyContent="space-between"
+						>
+							<Text>
+								Attempts: <Text as={'span'}>0</Text>
+							</Text>
+						</Box>
+						<Box
+							display="flex"
+							alignItems="center"
+							justifyContent="space-between"
+						>
+							<Text>
+								Wins: <Text as={'span'}>0</Text>
+							</Text>
+						</Box>
+					</HStack>
+				</VStack>
+			</Flex>
+		</Box>
 	);
 };
 
