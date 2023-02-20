@@ -8,18 +8,12 @@ import { GameProvider } from './components/GameContext'
 function App() {
 	return (
 		<Router>
-//added/game-rules
-			<div className="container">
-			<GameProvider>
-
 			<Box id={'root-body'}>
- main
-				<Routes>
-					
-						<Route path="/" element={<MemoryGame />} />
-						<Route path="/scores" element={<Scores />} />
-					
-				</Routes>
+				<GameProvider>				
+					<Routes>					
+							<Route path="/" element={<MemoryGame />} />
+							<Route path="/scores" element={<Scores />} />					
+					</Routes>
 				</GameProvider>
 				<Navbar />
 			</Box>
