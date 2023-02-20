@@ -1,23 +1,14 @@
 // CHAKRA
 import { Box, Flex, Text, HStack, Heading, VStack } from '@chakra-ui/react';
-
+	
 // REACT
 import { useState } from 'react';
 
-const Header = () => {
-	const [turn, setTurn] = useState(0);
-	const [attempt, setAttempt] = useState(0);
-	const [win, setWin] = useState(0);
+import { useGameContext } from '../GameContext';
 
-	const handleTurn = () => {
-		setTurn(turn);
-	};
-	const handleAttempt = () => {
-		setAttempt(attempt);
-	};
-	const handleWin = () => {
-		setWin(win);
-	};
+const Header = () => {
+	
+	const { attempts, turns, win } = useGameContext();	
 
 	return (
 		<Box
@@ -40,6 +31,8 @@ const Header = () => {
 						>
 							<Text fontSize={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
 								Turns: <Text as={'span'}>0</Text>
+							<Text>
+								Turns: <Text as={'span'}>{turns}</Text>
 							</Text>
 						</Box>
 						<Box
@@ -49,6 +42,8 @@ const Header = () => {
 						>
 							<Text fontSize={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
 								Attempts: <Text as={'span'}>0</Text>
+							<Text>
+								Attempts: <Text as={'span'}>{attempts}</Text>
 							</Text>
 						</Box>
 						<Box
@@ -58,6 +53,8 @@ const Header = () => {
 						>
 							<Text fontSize={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
 								Wins: <Text as={'span'}>0</Text>
+							<Text>
+								Wins: <Text as={'span'}>{win}</Text>
 							</Text>
 						</Box>
 					</HStack>
