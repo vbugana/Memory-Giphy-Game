@@ -4,13 +4,18 @@ import Playground from '../Playground';
 
 const Main = () => {
 	return (
-		<Box as="main" bg={'rich-black'} paddingTop={2} paddingBottom={2}>
+		<Box
+			as="main"
+			bg={'rich-black'}
+			paddingTop={{ sm: 4 }}
+			paddingBottom={{ sm: 4 }}
+		>
 			<Box
-				padding={6}
-				m={'auto'}
-				w={{ base: '96%', md: '60%', lg: '40%', xl: '20%' }}
+				padding={4}
+				m={{ sm: 'auto' }}
+				w={{ base: '100%', sm: '80%', md: '70%', lg: '60%', xl: '32%' }}
 				bg={'white'}
-				borderRadius={4}
+				borderRadius={{ sm: 4 }}
 			>
 				<Playground />
 			</Box>

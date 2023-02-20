@@ -29,14 +29,16 @@ const Header = () => {
 		>
 			<Flex>
 				<VStack margin={'auto'}>
-					<Heading as={'h1'}>REACTors Game</Heading>
+					<Heading as={'h1'} fontSize={{ base: '1.25em', sm: '2.125em' }}>
+						REACTors Game
+					</Heading>
 					<HStack>
 						<Box
 							display="flex"
 							alignItems="center"
 							justifyContent="space-between"
 						>
-							<Text>
+							<Text fontSize={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
 								Turns: <Text as={'span'}>0</Text>
 							</Text>
 						</Box>
@@ -45,7 +47,7 @@ const Header = () => {
 							alignItems="center"
 							justifyContent="space-between"
 						>
-							<Text>
+							<Text fontSize={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
 								Attempts: <Text as={'span'}>0</Text>
 							</Text>
 						</Box>
@@ -54,7 +56,7 @@ const Header = () => {
 							alignItems="center"
 							justifyContent="space-between"
 						>
-							<Text>
+							<Text fontSize={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
 								Wins: <Text as={'span'}>0</Text>
 							</Text>
 						</Box>

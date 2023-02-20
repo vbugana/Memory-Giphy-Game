@@ -7,7 +7,7 @@ import Scores from './pages/Scores';
 function App() {
 	return (
 		<Router>
-			<Box id={'root-body'}>
+			<Box id={'root-body'} h={'100vh'}>
 				<Routes>
 					<Route path="/" element={<MemoryGame />} />
 					<Route path="/scores" element={<Scores />} />

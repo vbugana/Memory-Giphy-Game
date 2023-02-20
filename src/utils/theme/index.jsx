@@ -1,4 +1,7 @@
 import { extendTheme } from '@chakra-ui/react';
+import Text from './components/Text';
+
+Text;
 
 const theme = extendTheme({
 	fonts: {
@@ -13,8 +16,9 @@ const theme = extendTheme({
 		'rich-black': '#051923',
 		'raisin-black': '#20232a',
 	},
+
 	components: {
-		Link: {},
+		Text,
 	},
 });
 
