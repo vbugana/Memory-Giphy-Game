@@ -9,10 +9,16 @@ export const useGameContext = () => {
 export const GameProvider = ({ children }) => {
   const [cards, setCards] = useState([]);
   const [selectedCardIds, setSelectedCardIds] = useState([]);
+  const [attempts, setAttempts] = useState(0);
+  const [turns, setTurns] = useState(8);
+  const [match, setMatch] = useState(0);
+  const [win, setWin] = useState(0);
 
   const refreshCards = () => {
     setCards(getShuffledCards());
     setSelectedCardIds([]);
+    setMatch(0);
+    setTurns(8);
   };
 
   const showCard = (cardUId) => {
@@ -59,24 +65,37 @@ export const GameProvider = ({ children }) => {
 
   const checkForMatch = () => {
     // Check if the selected cards have the same id
-    if (selectedCardIds.length === 2) {
+    if (selectedCardIds.length === 2) {      
       const card1 = cards.find((card,index) => index === selectedCardIds[0]);
       const card2 = cards.find((card,index) => index === selectedCardIds[1]);
 
       if (card1.id === card2.id) {
         // If the cards match, clear the list of selected card ids
         setSelectedCardIds(prevState => []);
+        setMatch(match+1);
       } else {
         // If the cards don't match, hide them after a short delay
         setTimeout(() => {
           hideCards();
         }, 1000);
       }
+      setTurns(turns - 1);
+      checkEndgame()
     }
   };
 
+  function checkEndgame() {
+    if(match == 8){
+      setWin(win + 1);
+      setAttempts(attempts + 1);
+    } else if (turns == 0){      
+      setAttempts(attempts + 1);
+      refreshCards();
+    }
+  }
+
   return (
-    <GameContext.Provider value={{ cards, showCard, refreshCards }}>
+    <GameContext.Provider value={{ cards, showCard, refreshCards, attempts, turns, win }}>
       {children}
     </GameContext.Provider>
   );
