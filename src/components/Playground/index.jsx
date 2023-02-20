@@ -1,9 +1,14 @@
 import { Grid, GridItem } from '@chakra-ui/react';
 import Deck from '../Deck';
 import { useGameContext } from '../GameContext';
+import {useEffect} from 'react';
 
 const Playground = () => {
-	const { cards } = useGameContext();
+	const { cards, refreshCards } = useGameContext();
+
+	useEffect(() => {
+		refreshCards();
+	}, []);  
 
 	return (
 		<>
