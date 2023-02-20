@@ -7,21 +7,8 @@ import { useState } from 'react';
 import { useGameContext } from '../GameContext';
 
 const Header = () => {
-
-	const { cards } = useGameContext();	
-	const [turn, setTurn] = useState(0);
-	const [attempt, setAttempt] = useState(0);
-	const [win, setWin] = useState(0);
-
-	const handleTurn = () => {
-		setTurn(turn);
-	};
-	const handleAttempt = () => {
-		setAttempt(attempt);
-	};
-	const handleWin = () => {
-		setWin(win);
-	};
+	
+	const { attempts, turns, wins } = useGameContext();	
 
 	return (
 		<Box
@@ -41,7 +28,7 @@ const Header = () => {
 							justifyContent="space-between"
 						>
 							<Text>
-								Turns: <Text as={'span'}>0</Text>
+								Turns: <Text as={'span'}>{turns}</Text>
 							</Text>
 						</Box>
 						<Box
@@ -50,7 +37,7 @@ const Header = () => {
 							justifyContent="space-between"
 						>
 							<Text>
-								Attempts: <Text as={'span'}>0</Text>
+								Attempts: <Text as={'span'}>{attempts}</Text>
 							</Text>
 						</Box>
 						<Box
@@ -59,7 +46,7 @@ const Header = () => {
 							justifyContent="space-between"
 						>
 							<Text>
-								Wins: <Text as={'span'}>0</Text>
+								Wins: <Text as={'span'}>{wins}</Text>
 							</Text>
 						</Box>
 					</HStack>
