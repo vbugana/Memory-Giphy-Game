@@ -6,6 +6,7 @@ import {useEffect} from 'react';
 const Playground = () => {
 	const { cards, refreshCards } = useGameContext();
 
+	//refresh cards every time move to this page again
 	useEffect(() => {
 		refreshCards();
 	}, []);  
@@ -18,7 +19,7 @@ const Playground = () => {
 						<GridItem key={index} w="100%" h="40">
 							<Deck uId={index} id={card.id} image={card.image} isShowing={card.isShowing}/>
 						</GridItem>
-					);
+					 );
 				})}
 			</Grid>
 		</>
