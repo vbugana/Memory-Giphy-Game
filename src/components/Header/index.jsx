@@ -8,7 +8,7 @@ import { useGameContext } from '../GameContext';
 
 const Header = () => {
 	
-	const { attempts, turns, wins } = useGameContext();	
+	const { attempts, turns, win } = useGameContext();	
 
 	return (
 		<Box
@@ -46,7 +46,7 @@ const Header = () => {
 							justifyContent="space-between"
 						>
 							<Text>
-								Wins: <Text as={'span'}>{wins}</Text>
+								Wins: <Text as={'span'}>{win}</Text>
 							</Text>
 						</Box>
 					</HStack>

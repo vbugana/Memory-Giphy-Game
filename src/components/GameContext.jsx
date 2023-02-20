@@ -23,6 +23,9 @@ export const GameProvider = ({ children }) => {
 
   const showCard = (cardUId) => {
     // Find the card with the matching id and set isShowing to true
+    if(selectedCardIds.length === 2){
+      return ;
+    }
     setCards((prevCards) => {
       return prevCards.map((card, index) => {
         if (index === cardUId) {
@@ -54,7 +57,6 @@ export const GameProvider = ({ children }) => {
         }
       });
     });
-
     // Clear the list of selected card ids
     setSelectedCardIds(prevState => []);
   };
@@ -62,6 +64,10 @@ export const GameProvider = ({ children }) => {
   useEffect(() => {
     checkForMatch();
   }, [selectedCardIds]);
+
+  useEffect(() => {
+    checkEndgame();
+  }, [match, turns]);  
 
   const checkForMatch = () => {
     // Check if the selected cards have the same id
@@ -75,20 +81,23 @@ export const GameProvider = ({ children }) => {
         setMatch(match+1);
       } else {
         // If the cards don't match, hide them after a short delay
+        setTurns(turns - 1);
         setTimeout(() => {
           hideCards();
         }, 1000);
-      }
-      setTurns(turns - 1);
-      checkEndgame()
+      }                
     }
   };
 
   function checkEndgame() {
-    if(match == 8){
+    if(cards.length === 0){
+      return;
+    }
+    if(match === (cards.length/2)){
       setWin(win + 1);
       setAttempts(attempts + 1);
-    } else if (turns == 0){      
+      refreshCards();
+    } else if (turns === 0){      
       setAttempts(attempts + 1);
       refreshCards();
     }
