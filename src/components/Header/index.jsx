@@ -1,10 +1,14 @@
 // CHAKRA
 import { Box, Flex, Text, HStack, Heading, VStack } from '@chakra-ui/react';
-
+	
 // REACT
 import { useState } from 'react';
 
+import { useGameContext } from '../GameContext';
+
 const Header = () => {
+
+	const { cards } = useGameContext();	
 	const [turn, setTurn] = useState(0);
 	const [attempt, setAttempt] = useState(0);
 	const [win, setWin] = useState(0);

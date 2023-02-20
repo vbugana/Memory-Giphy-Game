@@ -1,9 +1,15 @@
 import { Grid, GridItem } from '@chakra-ui/react';
 import Deck from '../Deck';
 import { useGameContext } from '../GameContext';
+import {useEffect} from 'react';
 
 const Playground = () => {
-	const { cards } = useGameContext();
+	const { cards, refreshCards } = useGameContext();
+
+	//refresh cards every time move to this page again
+	useEffect(() => {
+		refreshCards();
+	}, []);  
 
 	return (
 		<>
@@ -13,7 +19,7 @@ const Playground = () => {
 						<GridItem key={index} w="100%" h="40">
 							<Deck uId={index} id={card.id} image={card.image} isShowing={card.isShowing}/>
 						</GridItem>
-					);
+					 );
 				})}
 			</Grid>
 		</>

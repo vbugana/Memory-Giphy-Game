@@ -7,8 +7,13 @@ export const useGameContext = () => {
 };
 
 export const GameProvider = ({ children }) => {
-  const [cards, setCards] = useState(getShuffledCards());
+  const [cards, setCards] = useState([]);
   const [selectedCardIds, setSelectedCardIds] = useState([]);
+
+  const refreshCards = () => {
+    setCards(getShuffledCards());
+    setSelectedCardIds([]);
+  };
 
   const showCard = (cardUId) => {
     // Find the card with the matching id and set isShowing to true
@@ -54,7 +59,6 @@ export const GameProvider = ({ children }) => {
 
   const checkForMatch = () => {
     // Check if the selected cards have the same id
-    console.log(selectedCardIds);
     if (selectedCardIds.length === 2) {
       const card1 = cards.find((card,index) => index === selectedCardIds[0]);
       const card2 = cards.find((card,index) => index === selectedCardIds[1]);
@@ -72,7 +76,7 @@ export const GameProvider = ({ children }) => {
   };
 
   return (
-    <GameContext.Provider value={{ cards, showCard }}>
+    <GameContext.Provider value={{ cards, showCard, refreshCards }}>
       {children}
     </GameContext.Provider>
   );
