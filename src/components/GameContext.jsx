@@ -7,7 +7,7 @@ export const useGameContext = () => {
 };
 
 export const GameProvider = ({ children }) => {
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState(getShuffledCards());
   const [selectedCardIds, setSelectedCardIds] = useState([]);
   const [attempts, setAttempts] = useState(0);
   const [turns, setTurns] = useState(8);
@@ -15,7 +15,7 @@ export const GameProvider = ({ children }) => {
   const [win, setWin] = useState(0);
 
   const refreshCards = () => {
-    setCards(getShuffledCards());
+    setCards();
     setSelectedCardIds([]);
     setMatch(0);
     setTurns(8);
