@@ -2,8 +2,6 @@
 import { Box, Flex, Text, HStack, Heading, VStack } from '@chakra-ui/react';
 	
 // REACT
-import { useState } from 'react';
-
 import { useGameContext } from '../GameContext';
 
 const Header = () => {
@@ -30,8 +28,6 @@ const Header = () => {
 							justifyContent="space-between"
 						>
 							<Text fontSize={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
-								Turns: <Text as={'span'}>0</Text>
-							<Text>
 								Turns: <Text as={'span'}>{turns}</Text>
 							</Text>
 						</Box>
@@ -41,8 +37,6 @@ const Header = () => {
 							justifyContent="space-between"
 						>
 							<Text fontSize={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
-								Attempts: <Text as={'span'}>0</Text>
-							<Text>
 								Attempts: <Text as={'span'}>{attempts}</Text>
 							</Text>
 						</Box>
@@ -52,8 +46,6 @@ const Header = () => {
 							justifyContent="space-between"
 						>
 							<Text fontSize={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
-								Wins: <Text as={'span'}>0</Text>
-							<Text>
 								Wins: <Text as={'span'}>{win}</Text>
 							</Text>
 						</Box>

@@ -1,6 +1,4 @@
 import { Grid, GridItem } from '@chakra-ui/react';
-import getShuffledCards from '../../Data/getShuffledCards';
-import gameCards from '../../Data/gameCards.json';
 import Deck from '../Deck';
 import { useGameContext } from '../GameContext';
 import {useEffect} from 'react';
@@ -15,8 +13,6 @@ const Playground = () => {
 
 	return (
 		<>
-			<Grid templateColumns="repeat(4, 1fr)" gap={2}>
-				{getShuffledCards().map((card, index) => {
 			<Grid templateColumns="repeat(4, 1fr)" gap={2}>			
 				{cards.map((card, index)=> {
 					return (
