@@ -13,22 +13,22 @@ const Text = extendTheme({
 		sm: {
 			fontSize: '1em',
 			textAlign: 'left',
-			marginRight: '1em',
+			marginRight: '2em',
 		},
 		md: {
-			fontSize: '1.3em',
+			fontSize: '1.125em',
 			textAlign: 'left',
-			marginRight: '1em',
+			marginRight: '2em',
 		},
 		lg: {
-			fontSize: '1.5em',
+			fontSize: '1.25em',
 			textAlign: 'left',
-			marginRight: '1em',
+			marginRight: '2em',
 		},
 		xl: {
-			fontSize: '1.75em',
+			fontSize: '1.5em',
 			textAlign: 'left',
-			marginRight: '1em',
+			marginRight: '2em',
 		},
 	},
 	// default values for 'size', 'variant' and 'colorScheme'

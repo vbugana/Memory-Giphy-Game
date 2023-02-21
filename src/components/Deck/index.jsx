@@ -13,11 +13,12 @@ const Deck = ({ uId, id, image, isShowing }) => {
 
 	return (
 		<Card bg={'steel-blue'} h={'100%'}>
-			<CardBody padding="2" onClick={handleClick}>
+			<CardBody padding="1" onClick={handleClick} h={'100%'}>
 				<Image
 					borderRadius={'base'}
 					mx="auto"
 					h={'100%'}
+					w={'100%'}
 					objectFit={'cover'}
 					src={isShowing ? image : '/images/logo.png'}
 				/>
