@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import getShuffledCards from '../Data/getShuffledCards';
+
 const GameContext = createContext();
 
 export const useGameContext = () => {
@@ -7,7 +7,7 @@ export const useGameContext = () => {
 };
 
 export const GameProvider = ({ children }) => {
-  const [cards, setCards] = useState(getShuffledCards());
+  const [cards, setCards] = useState([]);
   const [selectedCardIds, setSelectedCardIds] = useState([]);
   const [attempts, setAttempts] = useState(0);
   const [turns, setTurns] = useState(8);
@@ -15,7 +15,6 @@ export const GameProvider = ({ children }) => {
   const [win, setWin] = useState(0);
 
   const refreshCards = () => {
-    setCards();
     setSelectedCardIds([]);
     setMatch(0);
     setTurns(8);
@@ -68,6 +67,29 @@ export const GameProvider = ({ children }) => {
   useEffect(() => {
     checkEndgame();
   }, [match, turns]);  
+
+  useEffect(() => {
+    console.log(cards);
+  }, []);  
+
+  useEffect(() => {
+    fetch("https://api.giphy.com/v1/gifs/trending?api_key=zjYqCkStay01KEtkfS25WLkIix46y5Cb")
+      .then((response) => response.json())
+      .then((data) => {
+        let arr = [{"id": 0},{"id": 1},{"id": 2},{"id": 3},{"id": 4},{"id": 5},{"id": 6},{"id": 7}];
+        arr = arr.map((obj,index) => {
+          console.log(data);
+            return {
+              ...obj,
+              isShowing: false,
+              image: data.data[index].images.downsized.url
+            };
+        })            
+        setCards(arr.concat(arr).sort(() => Math.random() - 0.5));  
+         
+      })
+      .catch((error) => console.log(error));
+  }, []);
 
   const checkForMatch = () => {
     // Check if the selected cards have the same id
