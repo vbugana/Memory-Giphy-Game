@@ -1,12 +1,11 @@
 // CHAKRA
 import { Box, Flex, Text, HStack, Heading, VStack } from '@chakra-ui/react';
-	
+
 // REACT
 import { useGameContext } from '../GameContext';
 
 const Header = () => {
-	
-	const { attempts, turns, win } = useGameContext();	
+	const { attempts, turns, win } = useGameContext();
 
 	return (
 		<Box
@@ -18,7 +17,10 @@ const Header = () => {
 		>
 			<Flex>
 				<VStack margin={'auto'}>
-					<Heading as={'h1'} fontSize={{ base: '1.25em', sm: '2.125em' }}>
+					<Heading
+						as={'h1'}
+						variant={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}
+					>
 						REACTors Game
 					</Heading>
 					<HStack>
@@ -27,7 +29,7 @@ const Header = () => {
 							alignItems="center"
 							justifyContent="space-between"
 						>
-							<Text fontSize={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
+							<Text variant={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
 								Turns: <Text as={'span'}>{turns}</Text>
 							</Text>
 						</Box>
@@ -36,7 +38,7 @@ const Header = () => {
 							alignItems="center"
 							justifyContent="space-between"
 						>
-							<Text fontSize={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
+							<Text variant={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
 								Attempts: <Text as={'span'}>{attempts}</Text>
 							</Text>
 						</Box>
@@ -45,7 +47,7 @@ const Header = () => {
 							alignItems="center"
 							justifyContent="space-between"
 						>
-							<Text fontSize={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
+							<Text variant={{ sm: 'sm', md: 'md', lg: 'lg', xl: 'xl' }}>
 								Wins: <Text as={'span'}>{win}</Text>
 							</Text>
 						</Box>
