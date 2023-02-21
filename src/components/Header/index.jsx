@@ -2,8 +2,6 @@
 import { Box, Flex, Text, HStack, Heading, VStack } from '@chakra-ui/react';
 	
 // REACT
-import { useState } from 'react';
-
 import { useGameContext } from '../GameContext';
 
 const Header = () => {
