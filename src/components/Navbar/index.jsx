@@ -9,11 +9,11 @@ function Navbar() {
 			align={'center'}
 			justify={'center'}
 			padding={{
-				base: '1.27em',
-				sm: '.54em',
-				md: '.58em',
-				lg: '.48em',
-				xl: '.62em',
+				base: '1.62em',
+				sm: '1.39em',
+				md: '1em',
+				lg: '.82em',
+				xl: '.48em',
 			}}
 			bg={'sky-blue'}
 		>
@@ -28,9 +28,16 @@ function Navbar() {
 					// styling
 					color={'white'}
 					borderRadius={'full'}
-					padding={4}
+					padding={{ base: 1 }}
 					boxShadow={'base'}
 					bg={'prussian-blue'}
+					fontSize={{
+						base: '1.125em',
+						sm: '1.5em',
+						md: '1.5em',
+						lg: '1.8em',
+						xl: '2em',
+					}}
 					// hover styling
 					_hover={{
 						textDecoration: 'none',
@@ -50,9 +57,16 @@ function Navbar() {
 					// styling
 					color={'white'}
 					borderRadius={'full'}
-					padding={4}
+					padding={{ base: 1 }}
 					boxShadow={'base'}
 					bg={'prussian-blue'}
+					fontSize={{
+						base: '1.125em',
+						sm: '1.5em',
+						md: '1.5em',
+						lg: '1.8em',
+						xl: '2em',
+					}}
 					// hover styling
 					_hover={{
 						textDecoration: 'none',

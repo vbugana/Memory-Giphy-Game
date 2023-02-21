@@ -1,8 +1,8 @@
 import { CardBody, Card, Image } from '@chakra-ui/react';
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import { useGameContext } from '../GameContext';
 
-const Deck = ({uId, id, image, isShowing}) => {
+const Deck = ({ uId, id, image, isShowing }) => {
 	const { showCard } = useGameContext();
 
 	const handleClick = () => {
@@ -13,13 +13,14 @@ const Deck = ({uId, id, image, isShowing}) => {
 
 	return (
 		<Card bg={'steel-blue'} h={'100%'}>
-			<CardBody padding="2" onClick={handleClick}>
+			<CardBody padding="1" onClick={handleClick} h={'100%'}>
 				<Image
 					borderRadius={'base'}
 					mx="auto"
 					h={'100%'}
+					w={'100%'}
 					objectFit={'cover'}
-					src={isShowing ? image : 'https://picsum.photos/id/1/250/250'}
+					src={isShowing ? image : '/images/logo.png'}
 				/>
 			</CardBody>
 		</Card>
