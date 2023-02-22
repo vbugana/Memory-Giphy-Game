@@ -15,6 +15,7 @@ function Navbar() {
 				xl: '.38em',
 			}}
 			bg={'sky-blue'}
+			h={{ base: '8%', sm: '' }}
 		>
 			<HStack>
 				<Link

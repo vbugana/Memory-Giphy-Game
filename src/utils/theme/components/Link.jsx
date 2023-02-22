@@ -8,7 +8,7 @@ const Link = defineStyleConfig({
 		paddingX: 3,
 		paddingY: 2,
 		bg: 'prussian-blue',
-		fontSize: '1.125rem',
+		fontSize: '.75rem',
 
 		_hover: {
 			bg: 'steel-blue',
@@ -30,7 +30,7 @@ const Link = defineStyleConfig({
 	// Styles for the visual style variations
 	variants: {
 		sm: {
-			fontSize: '1.5rem',
+			fontSize: '1.125rem',
 		},
 		md: {
 			fontSize: '1.6rem',
@@ -40,7 +40,6 @@ const Link = defineStyleConfig({
 		},
 		xl: {
 			fontSize: '1.8rem',
-			paddingY: 1,
 		},
 
 		// Visual variant

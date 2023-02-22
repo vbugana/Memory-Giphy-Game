@@ -8,7 +8,12 @@ const Header = () => {
 	const { attempts, turns, win } = useGameContext();
 
 	return (
-		<Box as="header" bg={'sky-blue'} textColor={'raisin-black'}>
+		<Box
+			as="header"
+			bg={'sky-blue'}
+			textColor={'raisin-black'}
+			h={{ base: '14%', sm: '12%', md: '10%' }}
+		>
 			<Flex>
 				<VStack margin={'auto'}>
 					<Heading
