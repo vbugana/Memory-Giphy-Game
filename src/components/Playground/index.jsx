@@ -6,11 +6,6 @@ import { useEffect } from 'react';
 const Playground = () => {
 	const { cards, refreshCards } = useGameContext();
 
-	//refresh cards every time move to this page again
-	useEffect(() => {
-		refreshCards();
-	}, []);
-
 	return (
 		<>
 			<Grid templateColumns="repeat(4, 1fr)" gap={2}>
