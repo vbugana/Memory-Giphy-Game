@@ -4,29 +4,29 @@ const Text = defineStyleConfig({
 	// style object for base or default style
 	baseStyle: {
 		textAlign: 'center',
-		fontSize: '.75rem',
+		fontSize: '.75em',
 	},
 	// styles for different sizes ("sm", "md", "lg")
 	sizes: {},
 	// styles for different visual variants ("outline", "solid")
 	variants: {
 		sm: {
-			fontSize: '1rem',
+			fontSize: '1em',
 			textAlign: 'left',
 			marginRight: '2em',
 		},
 		md: {
-			fontSize: '1.125rem',
+			fontSize: '1.125em',
 			textAlign: 'left',
 			marginRight: '2em',
 		},
 		lg: {
-			fontSize: '1.25rem',
+			fontSize: '1.25em',
 			textAlign: 'left',
 			marginRight: '2em',
 		},
 		xl: {
-			fontSize: '1.5rem',
+			fontSize: '1.5em',
 			textAlign: 'left',
 			marginRight: '2em',
 		},
