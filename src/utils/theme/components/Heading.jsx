@@ -1,6 +1,6 @@
-import { extendTheme } from '@chakra-ui/react';
+import { defineStyleConfig } from '@chakra-ui/react';
 
-const Heading = extendTheme({
+const Heading = defineStyleConfig({
 	// style object for base or default style
 	baseStyle: {
 		fontSize: '1.125rem',
@@ -13,7 +13,7 @@ const Heading = extendTheme({
 		sm: { fontSize: '1.45rem' },
 		md: { fontSize: '1.75rem' },
 		lg: { fontSize: '1.95rem' },
-		xl: { fontSize: '2em' },
+		xl: { fontSize: '2rem' },
 	},
 	// default values for 'size', 'variant' and 'colorScheme'
 	defaultProps: {

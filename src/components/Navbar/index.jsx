@@ -9,15 +9,12 @@ function Navbar() {
 			id="footer-nav"
 			align={'center'}
 			justify={'center'}
-			padding={{
-				base: '1.62em',
-				sm: '1.39em',
-				md: '1em',
-				lg: '.82em',
-				xl: '.48em',
+			paddingY={{
+				base: '1.125em',
+				lg: '.75em',
+				xl: '.38em',
 			}}
 			bg={'sky-blue'}
-			h={{ sm: '8vh' }}
 		>
 			<HStack>
 				<Link
@@ -27,25 +24,13 @@ function Navbar() {
 					className={({ isActive }) =>
 						isActive ? 'nav-link active' : 'nav-link'
 					}
-					// styling
-					color={'white'}
-					borderRadius={'full'}
-					padding={{ base: 1 }}
-					boxShadow={'base'}
-					bg={'prussian-blue'}
-					fontSize={{
-						base: '1.125em',
-						sm: '1.5em',
-						md: '1.5em',
-						lg: '1.8em',
-						xl: '2em',
+					// Styling
+					variant={{
+						sm: 'sm',
+						md: 'md',
+						lg: 'lg',
+						xl: 'xl',
 					}}
-					// hover styling
-					_hover={{
-						textDecoration: 'none',
-					}}
-					// active styling
-					_active={{ bg: 'raisin-black', color: 'white' }}
 				>
 					Game
 				</Link>
@@ -57,24 +42,12 @@ function Navbar() {
 						isActive ? 'nav-link active' : 'nav-link'
 					}
 					// styling
-					color={'white'}
-					borderRadius={'full'}
-					padding={{ base: 1 }}
-					boxShadow={'base'}
-					bg={'prussian-blue'}
-					fontSize={{
-						base: '1.125em',
-						sm: '1.5em',
-						md: '1.5em',
-						lg: '1.8em',
-						xl: '2em',
+					variant={{
+						sm: 'sm',
+						md: 'md',
+						lg: 'lg',
+						xl: 'xl',
 					}}
-					// hover styling
-					_hover={{
-						textDecoration: 'none',
-					}}
-					// active styling
-					_active={{ bg: 'raisin-black', color: 'white' }}
 				>
 					Scores
 				</Link>

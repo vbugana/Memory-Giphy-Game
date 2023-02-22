@@ -7,8 +7,7 @@ const Main = () => {
 		<Box
 			as="main"
 			bg={'rich-black'}
-			paddingTop={{ sm: 4, md: 3.5, xl: 5 }}
-			h={{ sm: '82vh' }}
+			paddingY={{ base: 1, sm: 4, md: 3.5, xl: 5 }}
 		>
 			<Box
 				padding={4}
