@@ -14,7 +14,7 @@ const Playground = () => {
 						<GridItem
 							key={index}
 							w="100%"
-							h={{ base: '20', sm: '36', md: '40' }}
+							h={{ base: '20', sm: '24', md: '40' }}
 							// h={{ base: '20', sm: '24', md: '28', lg: '36', xl: '40' }}
 						>
 							<Deck

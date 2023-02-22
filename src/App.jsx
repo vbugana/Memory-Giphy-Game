@@ -8,7 +8,7 @@ import { GameProvider } from './components/GameContext';
 function App() {
 	return (
 		<Router>
-			<Box id={'root-body'}>
+			<Box id={'root-body'} h="100vh">
 				<GameProvider>
 					<Routes>
 						<Route path="/" element={<MemoryGame />} />
