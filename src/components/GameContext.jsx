@@ -13,13 +13,7 @@ export const GameProvider = ({ children }) => {
   const [turns, setTurns] = useState(8);
   const [match, setMatch] = useState(0);
   const [win, setWin] = useState(0);
-
-  const refreshCards = () => {
-    setSelectedCardIds([]);
-    setMatch(0);
-    setTurns(8);
-  };
-
+  
   const showCard = (cardUId) => {
     // Find the card with the matching id and set isShowing to true
     if(selectedCardIds.length === 2){
@@ -69,23 +63,18 @@ export const GameProvider = ({ children }) => {
   }, [match, turns]);  
 
   useEffect(() => {
-    console.log(cards);
-  }, []);  
-
-  useEffect(() => {
     fetch("https://api.giphy.com/v1/gifs/trending?api_key=zjYqCkStay01KEtkfS25WLkIix46y5Cb")
       .then((response) => response.json())
       .then((data) => {
         let arr = [{"id": 0},{"id": 1},{"id": 2},{"id": 3},{"id": 4},{"id": 5},{"id": 6},{"id": 7}];
         arr = arr.map((obj,index) => {
-          console.log(data);
-            return {
-              ...obj,
-              isShowing: false,
-              image: data.data[index].images.downsized.url
-            };
+          return {
+            ...obj,
+            isShowing: false,
+            image: data.data[index].images.downsized.url
+          };
         })            
-        setCards(arr.concat(arr).sort(() => Math.random() - 0.5));  
+        setCards(shuffle(arr.concat(arr)));  
          
       })
       .catch((error) => console.log(error));
@@ -111,6 +100,14 @@ export const GameProvider = ({ children }) => {
     }
   };
 
+  const shuffle = (arr) =>{
+    //return arr.sort(() => Math.random() - 0.5)
+    return (arr
+      .map(value => ({ value, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ value }) => value))
+  }
+
   function checkEndgame() {
     if(cards.length === 0){
       return;
@@ -118,15 +115,36 @@ export const GameProvider = ({ children }) => {
     if(match === (cards.length/2)){
       setWin(win + 1);
       setAttempts(attempts + 1);
-      refreshCards();
+      setCards(shuffle(flipBack(cards)));
+      refreshRound();      
     } else if (turns === 0){      
       setAttempts(attempts + 1);
-      refreshCards();
+      refreshRound();
+      setCards(flipBack(cards))
     }
   }
 
+  const refreshRound = () => {
+    setSelectedCardIds([]);
+    setMatch(0);
+    setTurns(8);        
+  };
+
+  const flipBack = (arrCards) => {
+    return(arrCards.map((card) => {
+      if (card.isShowing === true) {
+        return {
+          ...card,
+          isShowing: false,
+        };
+      } else {
+        return card;
+      }
+    }))
+  };
+
   return (
-    <GameContext.Provider value={{ cards, showCard, refreshCards, attempts, turns, win }}>
+    <GameContext.Provider value={{ cards, showCard, refreshRound, attempts, turns, win }}>
       {children}
     </GameContext.Provider>
   );
