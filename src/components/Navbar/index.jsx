@@ -6,6 +6,7 @@ import { NavLink as RouterLink } from 'react-router-dom';
 function Navbar() {
 	return (
 		<Flex
+			id="footer-nav"
 			align={'center'}
 			justify={'center'}
 			padding={{
@@ -16,6 +17,7 @@ function Navbar() {
 				xl: '.48em',
 			}}
 			bg={'sky-blue'}
+			h={{ sm: '8vh' }}
 		>
 			<HStack>
 				<Link
