@@ -7,13 +7,12 @@ const Main = () => {
 		<Box
 			as="main"
 			bg={'rich-black'}
-			paddingTop={{ sm: 4 }}
-			paddingBottom={{ sm: 4 }}
+			paddingY={{ base: 1, sm: 4, md: 3.5, xl: 5 }}
 		>
 			<Box
 				padding={4}
-				m={{ sm: 'auto' }}
-				w={{ base: '100%', sm: '80%', md: '70%', lg: '60%', xl: '32%' }}
+				mx={'auto'}
+				w={{ base: '100%', sm: '80%', md: '70%', lg: '60%', xl: '46%' }}
 				bg={'white'}
 				borderRadius={{ sm: 4 }}
 			>
