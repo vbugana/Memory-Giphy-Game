@@ -1,87 +1,137 @@
-# Memory-Giphy-Game
 
-A memory game made with a twist. This is not your usual Memory Card game as the cards are linked to API and they are GIFs instead of static images. 
+<h1 style="text-align: center;">Memory-Giphy-Game </h1>
 
-## Description
+A memory game made with a twist.
 
-Game is built using React.js, the game is a  project to practise React as well as algorithms and game logic.
+This is not your usual Memory Card game as the cards are linked to API and they are GIFs instead of static images, developed by the REACTors with [![My Skills](https://skillicons.dev/icons?i=js,nodejs,react,vite&theme=light)](https://skillicons.dev) and more.
 
-## User story
+  ## Table of content
 
-```As a Gamer,
-I want to guess the correct match of GIFs 
-I want to get the highest score in the allocated available attempts 
-```
+ <!-- …- [Memory-Giphy-Game](#memory-giphy-game) -->
+  - [Table of content](#table-of-content)
+  - [Description](#description)
+  - [User story](#user-story)
+  - [Game rules](#game-rules)
+  - [Demo](#demo)
+  - [Technologies used](#technologies-used)
+  - [Collaborators](#collaborators)
+  - [Licence](#licence)
+  - [Release](#release)
+  - [Future improvements](#future-improvements)
+  - [Contributing](#contributing)
+  
 
-## Game rule
+  ## Description
 
-* Min 10 cards available.
-* The App is counting the amount of clicks until you win.
-* The App is counting turn
-* The App is checking if the turns match (=2).
-* The App is tracking the Wins Count
-* The App is tracking the Attempts Count
-* The App is tracking the Count Attempts OverallCount
-* The App has a max limit of Attempts (8).
-* The timeout Length is  600.
-* A button can reset the game and play again after won.
-
-## How the game works
-
-Matching two GIFs on the allowed attempts
-
-## Wireframe:
-
-![copy of LISA (5)](https://user-images.githubusercontent.com/94523827/219762518-31033354-755d-412c-bb1f-faf9620ea56c.png)
-
-![copy of LISA (6)](https://user-images.githubusercontent.com/94523827/219763372-ddf290e3-fe75-4346-b510-5a4ee47daeac.png)
-
-## Technologies used
-* Javascript
-* REACT.js
-* CONTEXT.js
-* [GIPHY API](https://developers.giphy.com/docs/api/)
-* CHAKRA.js
-
-## Demo
-TO BE ADDED ("./images/demo")
-
-## Collaborators
-The REACTors:
-* [Dayo Adekunle](https://github.com/Data202)
-* [Vittoria Bugana](https://github.com/vbugana)
-* [Guillerme Duretti](https://github.com/GuilhermeDeretti)
-* [Santiago Gomez](https://github.com/2G2-99)
+  A memory game is a popular card game played by children and adults around the world. Good memory is one of the qualities required in order to succeed in it. This, however, is not enough. When it is assumed that the players have perfect memory, the memory game can be seen as a game of strategy. The game is analyzed under this assumption and the optimal strategy is found. It is simple and perhaps unexpected. This version of it does not use  static pictures but GIFS, which makes it 
 
 
-## Licence
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  
+  
+  ## User story
+
+
+  ``` 
+   As an APP USER;
+   I want TO EXERCISE MY MEMORY IN A EASY, FUN WAY
+   so that MY BRAIN STAYS SHARP 
+  ```
+
+  ## Game rules
+
+
+  * 16 cards available.
+  * The App is counting the amount of clicks until you win.
+  * The App is counting how many times you turn the cards
+  * The App is tracking the Wins Count
+  * The App is tracking the Attempts Count
+  * After completing the matches the game reshuffles with new GIFson.
+  
+  ## Demo
+
+
+  ![Demo](./assets/demo.gif)
+
+
+  The game has been deployed on Niftily 👋
+
+
+    [To play the Game, click here](https://memory-giphy-game.netlify.app/)
+
+
+  ## Technologies used
+
+
+  NODE.js and REACT.JS have been used to scaffold the core of the game, CANVA and Figma have been used to create the  wireframe and the prototype and logic and functionality have been implemented with CONTEXT API, VITE, CHAKRA
+
+  ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
+
+  ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+
+  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+  ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+
+  ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+
+  ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+
+  ![Chakra UI](https://img.shields.io/badge/Chakra%20UI%20React-%2335BDB2.svg?style=for-the-badge&logo=ChakraUI&logoColor=white)
+
+  ![Context API](https://img.shields.io/badge/context_API-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+
+  ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
+
+  ![GIPHY](https://img.shields.io/badge/GIPHY-005571?style=for-the-badge&logo=giphy)
 
 
 
-## Future improvements 
 
-Local storage to see past scores
-Interactive application to allow leaderboard globally accessible
+  ## Collaborators
 
-## Release
 
-v 0.1
+   The REACTors:
 
-## Minimum Requirements
+   * [Dayo Adekunle](https://github.com/Data202)
+   * [Vittoria Bugana](https://github.com/vbugana)
+   * [Guillerme Duretti](https://github.com/GuilhermeDeretti)
+   * [Santiago Gomez](https://github.com/2G2-99)
 
-Use React.
 
-Use Node.js.
+  ## Licence
 
-Have both GET and POST routes for retrieving and adding new data.
 
-Be deployed using Netlify.
+   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Use at least two libraries, packages, or technologies that we haven't discussed.
 
-Have a polished front end/UI.
+  ## Release
 
-Meet good quality coding standards (indentation, scoping, naming).
 
-Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+    v 0.1
+
+
+  ## Future improvements
+
+
+   * Improve the randomness of the cards in the APP
+
+   * Change the logic of the game so after three wrong turns is game over
+
+   * Add Light and Dark mode
+
+   * Make the game fully interactive allowing multiple players by implementing database
+
+   * Local storage to be added to get scored saved within the application
+
+   * Form to be added in order to be contacted
+
+   * Improve the responsiveness of the application
+
+   * Adding difficulty level to make the game more competitive
+
+
+  ## Contributing
+
+
+    Please raise an issue or a pull request
+ 
