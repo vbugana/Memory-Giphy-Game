@@ -53,12 +53,11 @@ This is not your usual Memory Card game as the cards are linked to API and they 
   ![Demo](./assets/demo.gif)
 
 
-  The game has been deployed on Niftily 👋
+  The game has been deployed on Neftily ✨✨✨ 
 
-
-  ![click here](https://memory-giphy-game.netlify.app/)
-
-
+  https://memory-giphy-game.netlify.app/ 👋
+  
+  
   ## Technologies used
 
 
