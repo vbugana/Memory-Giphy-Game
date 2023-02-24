@@ -50,6 +50,9 @@ This is not your usual Memory Card game as the cards are linked to API and they 
   ## Demo
 
 
+  ![Demo](./assets/demo.gif)
+
+
   The game has been deployed on Niftily 👋
 
 
