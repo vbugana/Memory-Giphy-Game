@@ -8,17 +8,17 @@ This is not your usual Memory Card game as the cards are linked to API and they 
   ## Table of content
 
  <!-- …- [Memory-Giphy-Game](#memory-giphy-game) -->
-- [Table of content](#table-of-content)
-- [Description](#description)
-- [User story](#user-story)
-- [Game rules](#game-rules)
-- [Demo](#demo)
-- [Technologies used](#technologies-used)
-- [Collaborators](#collaborators)
-- [Licence](#licence)
-- [Release](#release)
-- [Future improvements](#future-improvements)
-- [Contributing](#contributing)
+  - [Table of content](#table-of-content)
+  - [Description](#description)
+  - [User story](#user-story)
+  - [Game rules](#game-rules)
+  - [Demo](#demo)
+  - [Technologies used](#technologies-used)
+  - [Collaborators](#collaborators)
+  - [Licence](#licence)
+  - [Release](#release)
+  - [Future improvements](#future-improvements)
+  - [Contributing](#contributing)
   
 
   ## Description
@@ -87,18 +87,18 @@ This is not your usual Memory Card game as the cards are linked to API and they 
   ## Collaborators
 
 
-  The REACTors:
+   The REACTors:
 
-  * [Dayo Adekunle](https://github.com/Data202)
-  * [Vittoria Bugana](https://github.com/vbugana)
-  * [Guillerme Duretti](https://github.com/GuilhermeDeretti)
-  * [Santiago Gomez](https://github.com/2G2-99)
+   * [Dayo Adekunle](https://github.com/Data202)
+   * [Vittoria Bugana](https://github.com/vbugana)
+   * [Guillerme Duretti](https://github.com/GuilhermeDeretti)
+   * [Santiago Gomez](https://github.com/2G2-99)
 
 
   ## Licence
 
 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
   ## Release
@@ -110,25 +110,25 @@ This is not your usual Memory Card game as the cards are linked to API and they 
   ## Future improvements
 
 
-  * Improve the randomness of the cards in the APP
+   * Improve the randomness of the cards in the APP
 
-  * Change the logic of the game so after three wrong turns is game over
+   * Change the logic of the game so after three wrong turns is game over
 
-  * Add Light and Dark mode
+   * Add Light and Dark mode
 
-  * Make the game fully interactive allowing multiple players by implementing database
+   * Make the game fully interactive allowing multiple players by implementing database
 
-  * Local storage to be added to get scored saved within the application
+   * Local storage to be added to get scored saved within the application
 
-  * Form to be added in order to be contacted
+   * Form to be added in order to be contacted
 
-  * Improve the responsiveness of the application
+   * Improve the responsiveness of the application
 
-  * Adding difficulty level to make the game more competitive
+   * Adding difficulty level to make the game more competitive
 
 
   ## Contributing
 
 
-   Please raise an issue or a pull request
+    Please raise an issue or a pull request
  
