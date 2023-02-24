@@ -1,5 +1,5 @@
 
-<h1 style="text-align: center;">Memory-Giphy-Game </h1>
+<h1 style="text-align: center;"> Memory-Giphy-Game </h1>
 
 A memory game made with a twist.
 
@@ -56,7 +56,7 @@ This is not your usual Memory Card game as the cards are linked to API and they 
   The game has been deployed on Niftily 👋
 
 
-    [To play the Game, click here](https://memory-giphy-game.netlify.app/)
+  ![click here](https://memory-giphy-game.netlify.app/)
 
 
   ## Technologies used
